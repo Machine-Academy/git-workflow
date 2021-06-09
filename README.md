@@ -1,9 +1,10 @@
 # Git & GitHub
+
 Learning Github / Git workflow
 
 ## What is GitHub?
 
-GitHub is a place where you are able to store, share and collaborate with others on project and code. 
+GitHub is a place where you are able to store, share and collaborate with others on project and code.
 
 GitHub is free to use and is one of many places where code can be stored online for free. We use GitHub to store code as a backup, over time you will have many projects and code bases that will end up taking lots of space on your machine, its also a place where you can backup your code. Should your computer hard drive or SSD ever go corrupt your code is safe in GitHub.
 
@@ -36,7 +37,7 @@ the above commands need to be ran once in order to use git properly. Be sure to 
 
 - Git first time setup
 
-    [Git - First-Time Git Setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
+  [Git - First-Time Git Setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 
 ## Common Git commands
 
@@ -75,7 +76,7 @@ details about the commit here"
 
 - Git Commits: Semantic Commits
 
-    [Semantic Commit Messages](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
+  [Semantic Commit Messages](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
 
 When you commit code, you need to create a message, these messages are very useful for your self and others to understand changes that were made in the code at the specific point in time. This is really useful for when you want to `rollback` changes you made in your project
 
@@ -88,7 +89,7 @@ Push code back up to GitHub in the specified branch
 ex: git push origin main OR git push origin dev
 
 ```bash
-git checkout -b <branch name> 
+git checkout -b <branch name>
 ```
 
 create and move into a new branch
@@ -123,31 +124,30 @@ man git
 
 ## A Visual Aid
 
-![Git%20GitHub%20workflow%201eef524eac74448ab744dad0cb0dacac/vcs.jpeg](Git%20GitHub%20workflow%201eef524eac74448ab744dad0cb0dacac/vcs.jpeg)
+![Visual of Git flow](./images/vcs.jpeg)
 
 Or another example with a cloud based service such as GitHub:
 
-![Git%20GitHub%20workflow%201eef524eac74448ab744dad0cb0dacac/git_in_github_overview.png](Git%20GitHub%20workflow%201eef524eac74448ab744dad0cb0dacac/git_in_github_overview.png)
+![Visual of Git flow including a remote cloud repo](./images/git_in_github_overview.png)
 
 ## Videos
 
 - Web Dev Simplified
 
-    [Learn Git in 20 Minutes](https://www.youtube.com/watch?v=IHaTbJPdB-s)
+  [Learn Git in 20 Minutes](https://www.youtube.com/watch?v=IHaTbJPdB-s)
 
 - Fireship
 
-    [Git It? How to use Git and Github](https://www.youtube.com/watch?v=HkdAHXoRtos)
+  [Git It? How to use Git and Github](https://www.youtube.com/watch?v=HkdAHXoRtos)
 
 - Brad Traversy
 
-    [Git & GitHub Crash Course For Beginners](https://www.youtube.com/watch?v=SWYqp7iY_Tc)
+  [Git & GitHub Crash Course For Beginners](https://www.youtube.com/watch?v=SWYqp7iY_Tc)
 
 - Learn Code Academy
 
-    [Github Tutorial For Beginners - Github Basics for Mac or Windows & Source Control Basics](https://www.youtube.com/watch?v=0fKg7e37bQE)
+  [Github Tutorial For Beginners - Github Basics for Mac or Windows & Source Control Basics](https://www.youtube.com/watch?v=0fKg7e37bQE)
 
 ## Web Resources
 
 - [Web app for git commands / help](https://gitexplorer.com/)
-
