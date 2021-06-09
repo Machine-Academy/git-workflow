@@ -1,10 +1,6 @@
 # Git & GitHub
 Learning Github / Git workflow
 
-# Git / GitHub workflow
-
-Created: Jun 8, 2021 9:49 PM
-
 ## What is GitHub?
 
 GitHub is a place where you are able to store, share and collaborate with others on project and code. 
