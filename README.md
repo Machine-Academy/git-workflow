@@ -2,6 +2,29 @@
 
 Learning Git / GitHub workflow
 
+# Table of Contents
+
+- [What is Git](#What-is-Git?)
+- [What is GitHub](#What-is-GitHub?)
+- [Terminology](#Terminology?)
+- [Installing Git](#Installing-Git)
+    - [Initial Setup](#Initial-Setup)
+- [Common Git Commands](#Common-Git-commands)
+    - [Staging Files](#-Staging-Files)
+    - [Committing Changes](#Committing-Changes)
+    - [Pushes](#Pushes)
+    - [Pulls](#Pulls)
+    - [Branches](#Branches)
+    - [Moving between Branches](#Moving-between-Branches)
+    - [Logs](#Git-Log)
+    - [Git Man Page](#Git-Manual)
+- [Common Workflow](#Common-Workflow)
+- [Merge a Branch](Merge-a-Branch)
+- [Deleting Branches](#Deleting-Branches)
+- [Visual Aid](#A-Visual-Aid)
+- [Videos](#Videos)
+- [Other Web Resources](#Web-Resources)
+
 ## What is Git?
 
 Git is a version control system, its a way for us to track changes in our code locally, manage a project locally and many other things. Git and GitHub are in no way connected to one another rather they are two separate tools. Git is a way to track, save and manage changes within your code and GitHub is a place where you can safely store your code as a backup. Git is a CLI tool while GitHub is a web application / collaborative space for developers.
@@ -26,7 +49,29 @@ NOTE: Other than GitHub there are other platforms like it such as GitLab, BitBuc
 - push → Push the changes (commits) to the origin (local repository) or remote repository
 - pull → Pull changes from a remote to your local repository (will pull the changes to the matching branch; main (remote) → main (local))
 
-## Setting up git for the first time
+## Installing Git
+
+In order to install Git on your system either refer to the commands (\*nix based) or 
+refer to the Git-SCM page and find the correct system specs.
+
+    - Debian Based Distros (Pop_Os!/Ubuntu/LinuxMint)
+    ```
+    sudo apt install git
+    ```
+
+    
+    - Arch Based (Arch, Manjaro, Endeavour, ArcoLinux)
+    ```
+    sudo pacman -S git
+    ```
+
+- Git first time setup
+
+  [Git - First-Time Git Setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
+
+
+
+## Initial Setup
 
 ```bash
 git config --global user.name "John Doe"
@@ -35,25 +80,25 @@ git config --global user.email johndoe@example.com
 
 the above commands need to be ran once in order to use git properly. Be sure to replace "John Doe" with your name and the email "johndoe@example.com" with your email
 
-- Git first time setup
-
-  [Git - First-Time Git Setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
-
 ## Common Git commands
+
+### Cloning a project 
 
 ```bash
 git clone <link>
 ```
 
-clone / download a repo (project) onto your computer, in the current directory / folder you are in
+Clone / download a repo (project) onto your computer, in the current directory / folder you are in
 
 EX: `git clone [https://github.com/Machine-Academy/git-workflow.git](https://github.com/Machine-Academy/git-workflow.git)`
+
+### Staging Files
 
 ```bash
 git add .
 ```
 
-add all changed files and folders, in the current folder you are in, into the `staging` area
+Add all changed files and folders, in the current folder you are in, into the `staging` area
 
 ex: git add .
 
@@ -63,7 +108,9 @@ NOTE: . (dot) represents the current directory / folder that you are in.
 git add fileName [file2, file3 ....]
 ```
 
-add individual file(s) to the staging area, to be committed
+Add individual file(s) to the staging area, to be committed
+
+### Committing Changes
 
 ```bash
 git commit -m "commit message"
@@ -80,6 +127,8 @@ details about the commit here"
 
 When you commit code, you need to create a message, these messages are very useful for your self and others to understand changes that were made in the code at the specific point in time. This is really useful for when you want to `rollback` changes you made in your project
 
+### Pushes
+
 ```bash
 git push origin <branch>
 ```
@@ -88,13 +137,25 @@ Push code back up to GitHub in the specified branch
 
 ex: git push origin main OR git push origin dev
 
+### Pulls 
+
+```bash
+git pull
+```
+
+Pull new code down from remote repository (GitHub repo) into the current branch you are in.
+
+### Branches
+
 ```bash
 git checkout -b <branch name>
 ```
 
-create and move into a new branch
+Create and move into a new branch
 
 ex: git checkout -b testing (create a new branch called testing an move into it)
+
+### Moving between branches
 
 ```bash
 git checkout <existing branch>
@@ -104,22 +165,81 @@ Change your working branch, to a already existing branch.
 
 ex: git checkout dev (change to the existing branch named "dev") OR git checkout main (change to the existing branch named "main")
 
+
+### Git Log
+
 ```bash
 git log
 ```
 
 Show the commit history of the repo (project)
 
-```bash
-git pull
-```
 
-pull new code down from remote repository (GitHub repo) into the current branch you are in.
+### Git Manual
 
 ```bash
 man git
 ```
 
+## Common Workflow
+
+One of the most common problem when people are starting to use git, is to do all of their changes into the master/main branch, and that is not how you should be using git from day to day.
+
+Let's say that we are working on adding a new feature to a app. A good workflow would look
+something like:
+
+    ```
+    git branch -b <feature name>
+    
+    # or
+
+    git branch <feature name>
+    git checkout <feature name>
+
+    ```
+    
+**HINT** you can see the available branches on your repo by typing `git branch`. 
+The branch you're currently on will be indicated by a asterisk and, 
+if your shell allows it, a different color.
+
+After committing the changes, if you want to push the branch to your remote repository then:
+
+    ```
+    git push -u origin calc-devide
+    
+    git branch -a
+
+    ```
+
+For more in-depth information on the flags used above, you can use the command `man git` or `git push --help`
+
+## Merge a Branch
+
+After adding a branch, doing some change and finishing adding your features (please run the tests.) we are ready to merge that  branch to main/master.
+
+    git checkout master    # Changing branch to master/main on GitHub/ other remote
+    git pull origin master # Pulling the changes that could have been done before we merge our feature
+    git branch --merged    # This shows the branches that you already merged so far.
+    git merge <branch to be merged>
+    git push origin master 
+    git branch --merged    # The new branch that was just merged should show here.
+
+
+## Deleting Branches
+
+Now that the merge was done, and you added the feature you needed. You can delete this branch.
+
+    ```
+    git branch -d <branch to be deleted>
+    ```
+
+This command will delete the desired branch, but this change was just made locally. 
+
+- If you want to delete the branch from the remote repo as well:
+
+    ```
+    git push origin --delete <branch to be deleted>
+    ```
 ---
 
 ## A Visual Aid
