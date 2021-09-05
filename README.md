@@ -21,16 +21,15 @@ Learning Git / GitHub workflow
 - [Common Workflow](#Common-Workflow)
 - [Merge a Branch](Merge-a-Branch)
 - [Deleting Branches](#Deleting-Branches)
+- [Fork and Pull Request](#Fork-And-Pull-Request)
 - [Visual Aid](#A-Visual-Aid)
 - [Videos](#Videos)
 - [Other Web Resources](#Web-Resources)
 
 ## What is Git?
-
 Git is a version control system, its a way for us to track changes in our code locally, manage a project locally and many other things. Git and GitHub are in no way connected to one another rather they are two separate tools. Git is a way to track, save and manage changes within your code and GitHub is a place where you can safely store your code as a backup. Git is a CLI tool while GitHub is a web application / collaborative space for developers.
 
 ## What is GitHub?
-
 GitHub is a place where you are able to store, share and collaborate with others on project and code. GitHub is free to use and is 
 one of many places where code can be stored online for free. We use GitHub to 
 store code as a backup, over time you will have many projects and code bases that will end up taking lots of space on your machine, its also a place where you can backup your code. Should your computer hard drive or SSD ever go corrupt your code is safe in GitHub.
@@ -240,6 +239,25 @@ This command will delete the desired branch, but this change was just made local
     ```
     git push origin --delete <branch to be deleted>
     ```
+
+## Forking Projects
+
+On GitHub (and most other git related sites), you can fork a project and then begin making edits
+to the source code. This is useful for when you want to help build a project or improve a feature
+but are not a direct contributor or active maintainer. 
+
+On GitHub, find a project that you may want to use / modify / contribute towards. On the repo's page
+you will see a "Fork" button on the upper righthand side of the screen.
+
+Click that and then you will be one step closer to writing code! Now that it's done, 
+you can clone *your* version of this repo to your local machine and begin making edits. Once you have
+the change you would like to see (and meet any testing requirements) then you can go back to the
+***Main*** project repo and open a new Pull Request. 
+
+Note: You may have to specify what branches to compare against (you want to compare *your* version against *main* -- or whatever branch should be modified). 
+
+Once this is done (meaning the PR is open) the project owner will then review the PR (or ignore it ... which can happen) and leave feedback or accept the changes.
+
 ---
 
 ## A Visual Aid
