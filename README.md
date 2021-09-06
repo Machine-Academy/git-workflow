@@ -4,8 +4,8 @@ Learning Git / GitHub workflow
 
 # Table of Contents
 
-- [What is Git](#what-is-Git)
-- [What is GitHub](#what-is-github?)
+- [What is Git](#what-is-git)
+- [What is GitHub](#what-is-github)
 - [Terminology](#terminology?)
 - [Installing Git](#installing-git)
     - [Initial Setup](#initial-Setup)
@@ -29,7 +29,7 @@ Learning Git / GitHub workflow
 ## What is Git
 Git is a version control system, its a way for us to track changes in our code locally, manage a project locally and many other things. Git and GitHub are in no way connected to one another rather they are two separate tools. Git is a way to track, save and manage changes within your code and GitHub is a place where you can safely store your code as a backup. Git is a CLI tool while GitHub is a web application / collaborative space for developers.
 
-## What is GitHub?
+## What is GitHub
 GitHub is a place where you are able to store, share and collaborate with others on project and code. GitHub is free to use and is 
 one of many places where code can be stored online for free. We use GitHub to 
 store code as a backup, over time you will have many projects and code bases that will end up taking lots of space on your machine, its also a place where you can backup your code. Should your computer hard drive or SSD ever go corrupt your code is safe in GitHub.
