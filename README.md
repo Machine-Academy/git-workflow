@@ -2,6 +2,30 @@
 
 Learning Git / GitHub workflow
 
+# Table of Contents
+
+- [What is Git](#what-is-Git)
+- [What is GitHub](#what-is-github?)
+- [Terminology](#terminology?)
+- [Installing Git](#installing-git)
+    - [Initial Setup](#initial-Setup)
+- [Common Git Commands](#common-git-commands)
+    - [Staging Files](#staging-files)
+    - [Committing Changes](#committing-changes)
+    - [Pushes](#pushes)
+    - [Pulls](#pulls)
+    - [Branches](#branches)
+    - [Moving between Branches](#moving-between-branches)
+    - [Logs](#git-log)
+    - [Git Man Page](#git-manual)
+- [Common Workflow](#common-workflow)
+- [Merge a Branch](#merge-a-branch)
+- [Deleting Branches](#deleting-branches)
+- [Fork and Pull Request](#fork-and-pull-request)
+- [Visual Aid](#a-visual-aid)
+- [Videos](#videos)
+- [Other Web Resources](#web-resources)
+
 ## What is Git
 Git is a version control system, its a way for us to track changes in our code locally, manage a project locally and many other things. Git and GitHub are in no way connected to one another rather they are two separate tools. Git is a way to track, save and manage changes within your code and GitHub is a place where you can safely store your code as a backup. Git is a CLI tool while GitHub is a web application / collaborative space for developers.
 
