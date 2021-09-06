@@ -6,7 +6,7 @@ Learning Git / GitHub workflow
 
 - [What is Git](#what-is-git)
 - [What is GitHub](#what-is-github)
-- [Terminology](#terminology?)
+- [Terminology](#terminology)
 - [Installing Git](#installing-git)
     - [Initial Setup](#initial-Setup)
 - [Common Git Commands](#common-git-commands)
