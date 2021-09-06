@@ -21,7 +21,7 @@ Learning Git / GitHub workflow
 - [Common Workflow](#common-workflow)
 - [Merge a Branch](#merge-a-branch)
 - [Deleting Branches](#deleting-branches)
-- [Fork and Pull Request](#fork-and-pull-request)
+- [Forks and Pull Request](#fork-and-pull-request)
 - [Visual Aid](#a-visual-aid)
 - [Videos](#videos)
 - [Other Web Resources](#web-resources)
@@ -240,7 +240,7 @@ This command will delete the desired branch, but this change was just made local
     git push origin --delete <branch to be deleted>
     ```
 
-## Forking Projects
+## Fork and Pull Request
 
 On GitHub (and most other git related sites), you can fork a project and then begin making edits
 to the source code. This is useful for when you want to help build a project or improve a feature
